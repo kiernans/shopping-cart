@@ -10,5 +10,10 @@
 
 .nav-items {
     display: flex;
-    gap: 40px;
+    gap: 40px; 
 }
+
+.nav-items a:hover {
+    background: #ddd;
+    color: black;
+  }
