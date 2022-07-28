@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/Shopping.css"
+import "../styles/Shop.css"
 import Navbar from './Navbar';
 
-const Shopping = () => {
+const Shop = () => {
     return (
         <div className="container">
             <Navbar />
@@ -13,4 +13,4 @@ const Shopping = () => {
     );
 };
 
-export default Shopping;
+export default Shop;
