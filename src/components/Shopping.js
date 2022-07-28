@@ -1,8 +1,15 @@
 import React from "react";
+import "../styles/Shopping.css"
+import Navbar from './Navbar';
 
 const Shopping = () => {
     return (
-        <h1>Shopping</h1>
+        <div className="container">
+            <Navbar />
+            <div className="main">
+                <h1>Shop</h1> 
+            </div>
+        </div>
     );
 };
 
