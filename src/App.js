@@ -1,15 +1,78 @@
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import Shop from './components/Shop';
 import ShoppingCart from './components/ShoppingCart';
 
 const App = () => {
+
+    const initialShop = [
+        {
+            id: '1',
+            name: "1",
+            qty: 0,
+            price: 1.00
+        },
+        {
+            id: '2',
+            name: "2",
+            qty: 0,
+            price: 2.00
+        },
+        {
+            id: '3',
+            name: "3",
+            qty: 0,
+            price: 3.00
+        },
+        {
+            id: '4',
+            name: "4",
+            qty: 0,
+            price: 4.00
+        },
+        {
+            id: '5',
+            name: "5",
+            qty: 0,
+            price: 5.00
+        },
+        {
+            id: '6',
+            name: "6",
+            qty: 0,
+            price: 6.00
+        },
+    ];
+
+    const [ shopItems, setShopItems ] = useState(initialShop);
+    const [ total, setTotal ] = useState(0);
+
+    useEffect(() => {
+        console.log(shopItems);
+    }, [shopItems])
+
+    const addItem = (e) => {
+        const id = e.target.id;
+        console.log(id);
+        let myItem = shopItems.filter((item) => item.id === id)[0];
+        myItem.qty += 1;
+        console.log(myItem);
+        setShopItems([...shopItems, myItem]);
+    };
+
+    const getTotal = () => {
+        const chosenItems = shopItems.filter((item) => item.qty > 0);
+        let total = chosenItems.reduce((prev, curr) => prev + curr.qty * curr.price, 0);
+        console.log(total);
+    };
+
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="" element={<Homepage />} />
-                <Route path="shop" element={<Shop />} />
-                <Route path="cart" element={<ShoppingCart />} />
+                <Route path="shop" element={<Shop shopItems={shopItems} addItem={addItem}/>} />
+                <Route path="cart" element={<ShoppingCart total={total} />} />
                 <Route path="*" element={<p>There's nothing here!</p>} />
             </Routes>
         </BrowserRouter>
