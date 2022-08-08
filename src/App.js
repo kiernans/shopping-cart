@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
+import Navbar from './components/Navbar';
 import Shop from './components/Shop';
 import ShoppingCart from './components/ShoppingCart';
+import { getTotal, getItem, incrementQuantity } from './actions/cart';
 
 const App = () => {
 
@@ -53,22 +55,12 @@ const App = () => {
     }, [shopItems])
 
     const addItem = (e) => {
-        const id = e.target.id;
-        console.log(id);
-        let myItem = shopItems.filter((item) => item.id === id)[0];
-        myItem.qty += 1;
-        console.log(myItem);
-        setShopItems([...shopItems, myItem]);
-    };
-
-    const getTotal = () => {
-        const chosenItems = shopItems.filter((item) => item.qty > 0);
-        let total = chosenItems.reduce((prev, curr) => prev + curr.qty * curr.price, 0);
-        console.log(total);
+        setShopItems(incrementQuantity(shopItems, e.target.id));
     };
 
     return (
         <BrowserRouter>
+            <Navbar />
             <Routes>
                 <Route path="" element={<Homepage />} />
                 <Route path="shop" element={<Shop shopItems={shopItems} addItem={addItem}/>} />
