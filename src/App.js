@@ -4,7 +4,7 @@ import Homepage from './components/Homepage';
 import Navbar from './components/Navbar';
 import Shop from './components/Shop';
 import ShoppingCart from './components/ShoppingCart';
-import { getTotal, getItem, incrementQuantity } from './helpers/cart';
+import { getTotal, getItem, incrementQuantity } from './helpers/ShopHelper';
 
 const App = () => {
 
