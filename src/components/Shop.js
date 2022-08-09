@@ -6,7 +6,6 @@ const Shop = ({ shopItems, addItem }) => {
     return (
         <div className="container">
             <div className="main">
-                <h1>Shop</h1>
                 {
                     shopItems.map((item) => {
                         return <div key={item.id} id={item.id} className='item'>
