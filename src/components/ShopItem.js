@@ -6,7 +6,7 @@ const ShopItem = ({ name, id, qty, price, addItem }) => {
             <img src={require('../1.png')} />
             <p>{name}</p>
             <p>{qty}</p>
-            <p>{price}</p>
+            <p>{price.toFixed(2)}</p>
         </div>
     );
 };
