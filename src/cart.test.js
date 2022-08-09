@@ -1,4 +1,4 @@
-import { getTotal, getItem, removeItem, incrementQuantity } from './actions/cart';
+import { getTotal, getItem, removeItem, incrementQuantity } from './helpers/cart';
 
 const initialShop = [
     { id: '1', name: '1', qty: 1, price: 1.00 },
