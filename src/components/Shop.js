@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Shop.css"
 import ShopItem from "./ShopItem";
 
-const Shop = ({ shopItems, addItem }) => {
+const Shop = ({ shopItems, addItem, removeItem }) => {
     return (
         <div className="container">
             <div className="main">
