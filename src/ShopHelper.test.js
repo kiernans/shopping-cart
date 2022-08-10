@@ -1,4 +1,4 @@
-import { getTotal, getItem, removeItem, incrementQuantity } from './helpers/cart';
+import { getTotal, getItem, removeItem, incrementQuantity, decrementQuantity } from './helpers/ShopHelper';
 
 const initialShop = [
     { id: '1', name: '1', qty: 1, price: 1.00 },
@@ -38,7 +38,7 @@ describe('Remove Item', () => {
 });
 
 describe('Increment Quantity', () => {
-    it('Adds item', () => {
+    it('Increases quantity by 1', () => {
         const result = [
             { id: '1', name: '1', qty: 2, price: 1.00 },
             { id: '2', name: '2', qty: 4, price: 2.00 },
@@ -49,5 +49,19 @@ describe('Increment Quantity', () => {
         ];
 
         expect(incrementQuantity(initialShop, '1')).toEqual(result);
+    });
+});
+
+describe('Decrement Quantity', () => {
+    it('Decreases quantity by 1', () => {
+        const result = [
+            { id: '1', name: '1', qty: 2, price: 1.00 },
+            { id: '2', name: '2', qty: 3, price: 2.00 },
+            { id: '3', name: '3', qty: 0, price: 3.00 },
+            { id: '4', name: '4', qty: 0, price: 4.00 },
+            { id: '5', name: '5', qty: 0, price: 5.00 },
+            { id: '6', name: '6', qty: 2, price: 6.99 },
+        ];
+        expect(decrementQuantity(initialShop, '2')).toEqual(result);
     });
 });
