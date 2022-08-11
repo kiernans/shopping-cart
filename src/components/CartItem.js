@@ -1,6 +1,6 @@
 import '../styles/CartItem.css'
 
-const CartItem = ({ name, id, qty, price, addItem }) => {
+const CartItem = ({ name, id, qty, price }) => {
     return (
         <div className="CartItem" id={id}>
             <p>{name}</p>

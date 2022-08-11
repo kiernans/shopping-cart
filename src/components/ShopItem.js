@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
 import '../styles/ShopItem.css';
 
-const ShopItem = ({ name, id, qty, price, addItem }) => {
+const ShopItem = ({ name, id, qty, price }) => {
 
     return (
         <div className="ShopItem" id={id}>
