@@ -1,29 +1,29 @@
 import React, { useEffect } from "react";
 import "../styles/Shop.css"
-import ShopItem from "./ShopItem";
+import ShopItem from '../components/ShopItem';
 
-const Shop = ({ shopItems, addItem, removeItem }) => {
+const Shop = ({ shopItems, addShopItem, decrementShopItem }) => {
 
     useEffect(() => {
         const addButtons = document.querySelectorAll('.add-item');
         const removeButtons = document.querySelectorAll('.remove-item');
         addButtons.forEach(button => {
-            button.addEventListener('click', addItem);
+            button.addEventListener('click', addShopItem);
         });
         removeButtons.forEach(button => {
-            button.addEventListener('click', removeItem);
+            button.addEventListener('click', decrementShopItem);
         });
         
 
         return () => {
             addButtons.forEach(button => {
-                button.removeEventListener('click', addItem);
+                button.removeEventListener('click', addShopItem);
             })
             removeButtons.forEach(button => {
-                button.removeEventListener('click', removeItem);
+                button.removeEventListener('click', decrementShopItem);
             })
         };
-    }, [addItem, removeItem]);
+    }, [addShopItem, decrementShopItem]);
 
     return (
         <div className="container">

@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import CartItem from "./CartItem";
+import CartItem from '../components/CartItem'
 import "../styles/ShoppingCart.css"
 
-const ShoppingCart = ({ total, shopItems, addItem, removeItem }) => {
+const ShoppingCart = ({ total, shopItems, addShopItem, decrementShopItem }) => {
     
     let chosenItems = shopItems.filter(item => item.qty > 0);
 
