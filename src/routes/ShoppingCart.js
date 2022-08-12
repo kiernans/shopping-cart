@@ -7,8 +7,25 @@ const ShoppingCart = ({ total, shopItems, addShopItem, decrementShopItem, getTot
     let chosenItems = shopItems.filter(item => item.qty > 0);
     
     useEffect(() => {
-        console.log('Chosen items: ', chosenItems);
-    }, [chosenItems])
+        const addButtons = document.querySelectorAll('.add-item');
+        const removeButtons = document.querySelectorAll('.remove-item');
+        addButtons.forEach(button => {
+            button.addEventListener('click', addShopItem);
+        });
+        removeButtons.forEach(button => {
+            button.addEventListener('click', decrementShopItem);
+        });
+        
+
+        return () => {
+            addButtons.forEach(button => {
+                button.removeEventListener('click', addShopItem);
+            })
+            removeButtons.forEach(button => {
+                button.removeEventListener('click', decrementShopItem);
+            })
+        };
+    }, [addShopItem, decrementShopItem]);
 
     useEffect(() => {
         getTotal(shopItems);
@@ -22,13 +39,16 @@ const ShoppingCart = ({ total, shopItems, addShopItem, decrementShopItem, getTot
                                     return <div key={item.id} id={item.id} className='item'>
                                                 <CartItem name={item.name}
                                                         qty={item.qty}
-                                                        price={item.price}
-                                                        total={total} />
+                                                        price={item.price} 
+                                                        id={item.id}/>
                                             </div>
                                 })
                             : <p>Your cart is empty</p>
                 }
             </div>
+            <div className='total'>
+                {chosenItems.length ? <p>{total.toFixed(2)}</p> : ''}
+            </div> 
         </div>
         
     );
