@@ -8,7 +8,7 @@ import useShopHelper from './helpers/useShopHelper';
 
 const App = () => {
 
-    const { shopItems, total, addShopItem, decrementShopItem } = useShopHelper();
+    const { shopItems, total, addShopItem, decrementShopItem, getTotal } = useShopHelper();
 
     useEffect(() => {
         console.log(shopItems);
@@ -25,7 +25,8 @@ const App = () => {
             <Route path="cart" element={<ShoppingCart total={total} 
                                                         shopItems={shopItems} 
                                                         addShopItem={addShopItem} 
-                                                        decrementShopItem={decrementShopItem}/>} />
+                                                        decrementShopItem={decrementShopItem}
+                                                        getTotal={getTotal}/>} />
             <Route path="*" element={<p>There's nothing here!</p>} />
         </Routes>
         </>
