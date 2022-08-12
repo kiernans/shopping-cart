@@ -8,8 +8,8 @@ const ShopItem = ({ name, id, qty, price }) => {
             <p>{name}</p>
             <p>{qty}</p>
             <p>${price.toFixed(2)}</p>
-            <button className='add-item' id={id}>Add</button>
-            <button className='remove-item' id={id}>Remove</button>
+            <button className='add-item' name={id}>Add</button>
+            <button className='remove-item' name={id}>Remove</button>
         </div>
     );
 };

@@ -39,11 +39,11 @@ const useShopHelper = () => {
     };
 
     const addShopItem = (e) => {
-        setShopItems(incrementQuantity(shopItems, e.target.id));
+        setShopItems(incrementQuantity(shopItems, e.target.name));
     };
     
     const decrementShopItem = (e) => {
-        setShopItems(decrementQuantity(shopItems, e.target.id));
+        setShopItems(decrementQuantity(shopItems, e.target.name));
     };
 
     const getTotal = (shopItems) => {
