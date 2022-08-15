@@ -4,10 +4,14 @@ const ShopItem = ({ name, id, qty, price }) => {
 
     return (
         <div className="ShopItem" id={id}>
-            <img src={require('../1.png')} alt='' />
-            <p>{name}</p>
+            <div className='item-title'>
+                {name}
+            </div>
+            <img className='item-image' src={require('../1.png')} alt='' />
             <p>{qty}</p>
-            <p>${price.toFixed(2)}</p>
+            <div className='item-price'>
+                ${price.toFixed(2)}
+            </div>
             <button className='add-item' id={id}>Add</button>
             <button className='remove-item' id={id}>Remove</button>
         </div>
