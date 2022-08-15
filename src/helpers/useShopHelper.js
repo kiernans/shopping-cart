@@ -3,12 +3,12 @@ import { useState } from "react";
 const useShopHelper = () => {
 
     const initialShop = [
-        { id: '1', name: '1', qty: 1, price: 1.00 },
-        { id: '2', name: '2', qty: 4, price: 2.00 },
+        { id: '1', name: '1', qty: 0, price: 1.00 },
+        { id: '2', name: '2', qty: 0, price: 2.00 },
         { id: '3', name: '3', qty: 0, price: 3.00 },
         { id: '4', name: '4', qty: 0, price: 4.00 },
         { id: '5', name: '5', qty: 0, price: 5.00 },
-        { id: '6', name: '6', qty: 2, price: 6.99 },
+        { id: '6', name: '6', qty: 0, price: 6.99 },
     ];
 
     const [ shopItems, setShopItems ] = useState(initialShop);
@@ -39,19 +39,21 @@ const useShopHelper = () => {
     };
 
     const addShopItem = (e) => {
-        setShopItems(incrementQuantity(shopItems, e.target.id));
+        setShopItems(incrementQuantity(shopItems, e.target.name));
     };
     
     const decrementShopItem = (e) => {
-        setShopItems(decrementQuantity(shopItems, e.target.id));
+        setShopItems(decrementQuantity(shopItems, e.target.name));
     };
 
     const getTotal = (shopItems) => {
         const chosenItems = shopItems.filter((item) => item.qty > 0);
-        return chosenItems.reduce((prev, curr) => prev + curr.qty * curr.price, 0);
+        const total = chosenItems.reduce((prev, curr) => prev + curr.qty * curr.price, 0);
+        setTotal(total);
     };
 
-    return { initialShop, shopItems, total, addShopItem, decrementShopItem };
+
+    return { initialShop, shopItems, total, addShopItem, decrementShopItem, getTotal };
 }
 
 export default useShopHelper;
