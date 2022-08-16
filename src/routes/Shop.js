@@ -27,14 +27,15 @@ const Shop = ({ shopItems, addShopItem, decrementShopItem }) => {
 
     return (
         <div className="container">
-            <div className="main">
+            <div className="Shop">
                 {
                     shopItems.map((item) => {
-                        return <div key={item.id} id={item.id} className='item'>
+                        return <div key={item.id} id={item.id} className='ShopItem'>
                             <ShopItem name={item.name}
                                       id={item.id}
                                       qty={item.qty}
-                                      price={item.price} />
+                                      price={item.price}
+                                      image={item.image} />
                         </div>
                     })
                 }

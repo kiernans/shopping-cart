@@ -8,11 +8,10 @@ html {
   justify-content: center;
 }
 
-.main {
+.Shop {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   margin-top: 90px;
-  gap: 81px;
+  gap: 80px;
   justify-content: center;
 }/*# sourceMappingURL=Shop.css.map */
