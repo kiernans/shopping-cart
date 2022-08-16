@@ -12,8 +12,7 @@ const ShopItem = ({ name, id, qty, price, image }) => {
             <div className='item-price'>
                 ${price.toFixed(2)}
             </div>
-            <button className='remove-item' name={id}>-</button>
-            <button className='add-item'name={id}>+</button>
+            <button className='add-item'name={id}>Add to cart</button>
         </>
     );
 };
