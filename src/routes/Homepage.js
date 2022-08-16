@@ -3,12 +3,13 @@ import "../styles/Homepage.css";
 
 const Homepage = () => {
   return (
-    <div className='full-screen bg-home'>
-      <div className="container">
-        <div className="main">
+    <>
+      <div className='full-screen bg-home'>
+        <div className="container">
         </div>
       </div>
-    </div>
+    </>
+    
     
   );
 }
