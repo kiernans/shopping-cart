@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/kiernans/shopping-cart/static/css/main.d507ab1a.css",
-    "main.js": "/kiernans/shopping-cart/static/js/main.304e4f8d.js",
-    "static/media/jason-ortego-buF62ewDLcQ-unsplash.jpg": "/kiernans/shopping-cart/static/media/jason-ortego-buF62ewDLcQ-unsplash.98dafd1410d07e9e3f4b.jpg",
-    "static/media/antoine-beauvillain-qrPqGP-SG8w-unsplash.jpg": "/kiernans/shopping-cart/static/media/antoine-beauvillain-qrPqGP-SG8w-unsplash.2e82d38c9f9e0e7e2c09.jpg",
-    "static/media/toni-lluch-JoRoy500nCc-unsplash.jpg": "/kiernans/shopping-cart/static/media/toni-lluch-JoRoy500nCc-unsplash.f16661ae784f75fdefb1.jpg",
-    "static/media/luis-poletti-th4bqV0PQpI-unsplash.jpg": "/kiernans/shopping-cart/static/media/luis-poletti-th4bqV0PQpI-unsplash.5c7b8d36aae8fc9cda05.jpg",
-    "static/media/luca-bravo-O453M2Liufs-unsplash.jpg": "/kiernans/shopping-cart/static/media/luca-bravo-O453M2Liufs-unsplash.0e3af03e4866e57dc044.jpg",
-    "static/media/james-wheeler-InOgamK2cuY-unsplash.jpg": "/kiernans/shopping-cart/static/media/james-wheeler-InOgamK2cuY-unsplash.a19c0de383cc7758b99d.jpg",
-    "static/media/clement-fusil-Fpqx6GGXfXs-unsplash.jpg": "/kiernans/shopping-cart/static/media/clement-fusil-Fpqx6GGXfXs-unsplash.060d8ea8634d20232e98.jpg",
-    "index.html": "/kiernans/shopping-cart/index.html",
-    "main.d507ab1a.css.map": "/kiernans/shopping-cart/static/css/main.d507ab1a.css.map",
-    "main.304e4f8d.js.map": "/kiernans/shopping-cart/static/js/main.304e4f8d.js.map"
+    "main.css": "/shopping-cart/static/css/main.1091090c.css",
+    "main.js": "/shopping-cart/static/js/main.1fa3d11a.js",
+    "static/media/jason-ortego-buF62ewDLcQ-unsplash.jpg": "/shopping-cart/static/media/jason-ortego-buF62ewDLcQ-unsplash.98dafd1410d07e9e3f4b.jpg",
+    "static/media/antoine-beauvillain-qrPqGP-SG8w-unsplash.jpg": "/shopping-cart/static/media/antoine-beauvillain-qrPqGP-SG8w-unsplash.2e82d38c9f9e0e7e2c09.jpg",
+    "static/media/toni-lluch-JoRoy500nCc-unsplash.jpg": "/shopping-cart/static/media/toni-lluch-JoRoy500nCc-unsplash.f16661ae784f75fdefb1.jpg",
+    "static/media/luis-poletti-th4bqV0PQpI-unsplash.jpg": "/shopping-cart/static/media/luis-poletti-th4bqV0PQpI-unsplash.5c7b8d36aae8fc9cda05.jpg",
+    "static/media/luca-bravo-O453M2Liufs-unsplash.jpg": "/shopping-cart/static/media/luca-bravo-O453M2Liufs-unsplash.0e3af03e4866e57dc044.jpg",
+    "static/media/james-wheeler-InOgamK2cuY-unsplash.jpg": "/shopping-cart/static/media/james-wheeler-InOgamK2cuY-unsplash.a19c0de383cc7758b99d.jpg",
+    "static/media/clement-fusil-Fpqx6GGXfXs-unsplash.jpg": "/shopping-cart/static/media/clement-fusil-Fpqx6GGXfXs-unsplash.060d8ea8634d20232e98.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.1091090c.css.map": "/shopping-cart/static/css/main.1091090c.css.map",
+    "main.1fa3d11a.js.map": "/shopping-cart/static/js/main.1fa3d11a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d507ab1a.css",
-    "static/js/main.304e4f8d.js"
+    "static/css/main.1091090c.css",
+    "static/js/main.1fa3d11a.js"
   ]
 }
