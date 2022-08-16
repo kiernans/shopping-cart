@@ -1,6 +1,15 @@
 .CartItem {
     display: flex;
     align-items: center;
-    width: 80vw;
+    width: 90vw;
     justify-content: space-around;
+    margin: 5px;
+    border: 1px solid grey;
+    border-right: none;
+    border-left: none;
+
+    .item-image {
+        width: 10%;
+        height: 100px;
+    }
 }

@@ -33,23 +33,27 @@ const ShoppingCart = ({ total, shopItems, addShopItem, decrementShopItem, getTot
       }, [getTotal, shopItems])
 
     return (
-        <div className="container">
-            <div className="main">
+        <>
+            <div className="Cart">
                 {chosenItems.length ? chosenItems.map((item) => {
-                                    return <div key={item.id} id={item.id} className='item'>
+                                    return <div key={item.id} id={item.id} className='CartItem'>
                                                 <CartItem name={item.name}
                                                         qty={item.qty}
                                                         price={item.price} 
-                                                        id={item.id}/>
+                                                        id={item.id}
+                                                        image={item.image}/>
                                             </div>
                                 })
                             : <p>Your cart is empty</p>
                 }
+                {chosenItems.length ? <div className='total'>
+                    <strong>Total</strong>
+                    &emsp;&emsp;&emsp;&emsp;
+                    {total.toFixed(2)}
+                </div>
+                : ''}
             </div>
-            <div className='total'>
-                {chosenItems.length ? <p>{total.toFixed(2)}</p> : ''}
-            </div> 
-        </div>
+        </>
         
     );
 };
