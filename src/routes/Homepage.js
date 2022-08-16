@@ -5,8 +5,6 @@ const Homepage = () => {
   return (
     <>
       <div className='full-screen bg-home'>
-        <div className="container">
-        </div>
       </div>
     </>
     

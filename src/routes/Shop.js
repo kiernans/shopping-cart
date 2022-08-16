@@ -26,7 +26,7 @@ const Shop = ({ shopItems, addShopItem, decrementShopItem }) => {
     }, [addShopItem, decrementShopItem]);
 
     return (
-        <div className="container">
+        <>
             <div className="Shop">
                 {
                     shopItems.map((item) => {
@@ -40,7 +40,7 @@ const Shop = ({ shopItems, addShopItem, decrementShopItem }) => {
                     })
                 }
             </div>
-        </div >
+        </>
     );
 };
 

@@ -17,18 +17,21 @@ const App = () => {
     return (
         <>
         <Navbar />
-        <Routes>
-            <Route path="" element={<Homepage />} />
-            <Route path="shop" element={<Shop shopItems={shopItems} 
-                                                addShopItem={addShopItem} 
-                                                decrementShopItem={decrementShopItem}/>} />
-            <Route path="cart" element={<ShoppingCart total={total} 
-                                                        shopItems={shopItems} 
-                                                        addShopItem={addShopItem} 
-                                                        decrementShopItem={decrementShopItem}
-                                                        getTotal={getTotal}/>} />
-            <Route path="*" element={<p>There's nothing here!</p>} />
-        </Routes>
+        <div className='container'>
+            <Routes>
+                <Route path="" element={<Homepage />} />
+                <Route path="shop" element={<Shop shopItems={shopItems} 
+                                                    addShopItem={addShopItem} 
+                                                    decrementShopItem={decrementShopItem}/>} />
+                <Route path="cart" element={<ShoppingCart total={total} 
+                                                            shopItems={shopItems} 
+                                                            addShopItem={addShopItem} 
+                                                            decrementShopItem={decrementShopItem}
+                                                            getTotal={getTotal}/>} />
+                <Route path="*" element={<p>There's nothing here!</p>} />
+            </Routes>
+        </div>
+        
         </>
         
     );
