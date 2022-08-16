@@ -3,12 +3,12 @@ import { useState } from "react";
 const useShopHelper = () => {
 
     const initialShop = [
-        { id: '1', name: '1', qty: 0, price: 1.00 },
-        { id: '2', name: '2', qty: 0, price: 2.00 },
-        { id: '3', name: '3', qty: 0, price: 3.00 },
-        { id: '4', name: '4', qty: 0, price: 4.00 },
-        { id: '5', name: '5', qty: 0, price: 5.00 },
-        { id: '6', name: '6', qty: 0, price: 6.99 },
+        { id: '1', name: 'A Beautiful Coast', qty: 0, price: 1.00, image: require('../assets/antoine-beauvillain-qrPqGP-SG8w-unsplash.jpg') },
+        { id: '2', name: 'A Pretty Lake', qty: 0, price: 2.00, image: require('../assets/clement-fusil-Fpqx6GGXfXs-unsplash.jpg') },
+        { id: '3', name: 'A Pier at Night', qty: 0, price: 3.00, image: require('../assets/james-wheeler-InOgamK2cuY-unsplash.jpg') },
+        { id: '4', name: 'A Boat on a Lake', qty: 0, price: 4.00, image: require('../assets/luca-bravo-O453M2Liufs-unsplash.jpg') },
+        { id: '5', name: 'A Snowy Mountain', qty: 0, price: 5.00, image: require('../assets/luis-poletti-th4bqV0PQpI-unsplash.jpg') },
+        { id: '6', name: 'An Autumn Trail', qty: 0, price: 6.99, image: require('../assets/toni-lluch-JoRoy500nCc-unsplash.jpg') },
     ];
 
     const [ shopItems, setShopItems ] = useState(initialShop);
